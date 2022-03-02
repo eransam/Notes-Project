@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa Slab One" rel="stylesheet">
+    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body onload="printStoredNotes()"  >
+  <div id="board" class="container h-75" >
+    <div id= "headerDiv">
+     <h1 class="d-flex justify-content-center " id= "h1Header">My Tasks Board </h1>
+    </div>
+    <div id= "formDiv" class="offset-2 offset-md-3 col-8 col-md-6">
+      <form id="taskForm"  >
+        <textarea name="" id="taskInput"
+        class="
+         bg-transparent border-0 
+         align-text-top font-italic" 
+         placeholder="My task is..." cols="30" rows="3"></textarea>
+         <div id= "deadLineDiv" class="" >
+           <label id= "deadLineLabel" class="font-monospace ">Dead-line:</label>
+           <input id="dateInput" type="date" class="input bg-transparent">
+           <input id="timeInput" type="time" class="input bg-transparent">
+         </div>
+        </form>
+        <div class="d-flex justify-content-center">
+          <button onclick="addNoteToStorage()" class="btn btn-primary btn-sm">Add Task</button>
+          <button type="reset" value="reset" class="btn btn-secondary btn-sm" >clear</button>
+        </div>
+    </div>
+    <br><br>
+    <div id= "notesDiv">
+      
+    </div>
+    
+  </div>
+
+</body>
+
+</html>
